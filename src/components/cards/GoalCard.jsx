@@ -14,7 +14,7 @@ export const GoalCard = ({ goal, deleteHandler }) => {
       <p>{goal?.description}</p>
       <span>Target Data: {new Date(goal?.targetDate).toLocaleDateString()}</span>
       <span>Target Calories: {goal?.targetCalories}g</span>
-      <span>Status: {goal?.status}g</span>
+      <span>Status: {goal?.status}</span>
     </li>
   );
 };
