@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 
 import { fetchExcercises } from "../../actions";
 
+import { ExerciseCard } from "../../components/cards/ExcerciseCard";
+
 export const Exercise = () => {
 
   const dispatch = useDispatch();
@@ -16,6 +18,14 @@ export const Exercise = () => {
   },[dispatch]);
 
   return (
-    <div>Exercise</div>
+    <div>
+      <h1 className={styles.heading}>Exercises</h1>
+      <ul>
+        {excercises.map(item=>
+          (
+            <ExerciseCard exercise={item}/>
+          ))}
+      </ul>
+    </div>
   )
 }
