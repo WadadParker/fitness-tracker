@@ -19,7 +19,8 @@ export const Goals = () => {
 
   const clickHandler=()=>
   {
-    dispatch(addGoal({name:input.name,description:input.description,date:input.date,calories:Number(input.calories),status:input.status}));
+    const formattedDate = new Date(input.date).toISOString().split('T')[0];
+    dispatch(addGoal({name:input.name,description:input.description,targetDate:formattedDate,targetCalories:Number(input.calories),status:input.status}));
     setInput({name:"",description:"",date:"",calories:"",status:"In Progress"});
   }
 
@@ -39,7 +40,7 @@ export const Goals = () => {
     <div>
       <h1 className={styles.heading}>Goals</h1>
       <section className={styles[`input-container`]}>
-        <input value={input.name} placeholder="Name" onChange={(e)=>changeHandler("name",e.target.value)}/>
+        <input value={input.name} placeholder="Goal Title" onChange={(e)=>changeHandler("name",e.target.value)}/>
         <input value={input.calories} type="Number" placeholder="Calories" onChange={(e)=>changeHandler("calories",e.target.value)}/>
         <input value={input.date} type="Date" onChange={(e)=>changeHandler("date",e.target.value)}/>
         <select value={input.status} className={`${styles.input} ${styles.select}`} onChange={(e)=>changeHandler("status",e.target.value)}>

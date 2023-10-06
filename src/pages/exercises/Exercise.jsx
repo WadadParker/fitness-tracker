@@ -21,7 +21,8 @@ export const Exercise = () => {
 
   const clickHandler=()=>
   {
-    dispatch(addExcercise({name:input.name,duration:Number(input.duration)}));
+    const capitalInput= input.name.charAt(0).toUpperCase() + input.name.slice(1);
+    dispatch(addExcercise({name:capitalInput,duration:Number(input.duration)}));
     setInput({name:"",duration:""})
   }
 
