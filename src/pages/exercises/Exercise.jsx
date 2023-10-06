@@ -21,10 +21,10 @@ export const Exercise = () => {
 
   const clickHandler=()=>
   {
-    dispatch(addExcercise(input));
+    dispatch(addExcercise({name:input.name,duration:Number(input.duration)}));
   }
 
-  const disableCheck=()=> input.name==='' || input.duration===''
+  const disableCheck=()=> input.name==='' || input.duration<1
 
   const deleteHandler=(id)=>
   {
@@ -41,7 +41,7 @@ export const Exercise = () => {
       <h1 className={styles.heading}>Exercises</h1>
       <section className={styles[`input-container`]}>
         <input placeholder="Name" onChange={(e)=>changeHandler("name",e.target.value)}/>
-        <input placeholder="Duration" onChange={(e)=>changeHandler("duration",e.target.value)}/>
+        <input type="Number" placeholder="Duration" onChange={(e)=>changeHandler("duration",e.target.value)}/>
         <button className={styles.button} disabled={disableCheck()} onClick={()=>clickHandler()}>Add New Exercise</button>
       </section>
       <ul className={styles.cards}>
