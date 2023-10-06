@@ -20,7 +20,7 @@ export const SideBar = () => {
            <Link className={styles.link} to="/goals"> Goals </Link>
         </li>
         <li className={styles.list}>
-            <a className={styles.link} href="https://github.com/WadadParker/neog-component-library" target="_blank">Github</a>
+            <a className={styles.link} href="https://github.com/WadadParker/fitness-tracker" target="_blank">Github</a>
         </li>
     </nav>
   )
