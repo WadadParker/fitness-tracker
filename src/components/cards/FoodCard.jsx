@@ -12,9 +12,9 @@ export const FoodCard = ({ food, deleteHandler }) => {
         <FontAwesomeIcon icon={faTrash} className={styles.icon} onClick={()=>deleteHandler(food._id)}/>
       </h2>
       <span>Calories: {food?.calories}</span>
-      <span>Protien: {food?.protein}g</span>
-      <span>Carbohydrates: {food?.carbohydrates}g</span>
-      <span>Fat: {food?.fat}g</span>
+      <span>Protien: {food?.protein["$numberDecimal"]}g</span>
+      <span>Carbohydrates: {food?.carbohydrates["$numberDecimal"]}g</span>
+      <span>Fat: {food?.fat["$numberDecimal"]}g</span>
     </li>
   );
 };
