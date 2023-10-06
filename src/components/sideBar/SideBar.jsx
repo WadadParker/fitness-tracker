@@ -11,7 +11,7 @@ export const SideBar = () => {
           <Link className={styles.link} to="/">Dashboard</Link>
         </li>
         <li className={styles.list}>
-           <Link className={styles.link} to="/excercises"> Excercises </Link>
+           <Link className={styles.link} to="/exercises"> Exercises</Link>
         </li>
         <li className={styles.list}>
            <Link className={styles.link} to="/food"> Food </Link>

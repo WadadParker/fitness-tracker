@@ -1,0 +1,25 @@
+.card-container {
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 12px;
+    display: grid;
+    list-style: none;
+    min-width: 15rem;
+    margin: 1em;
+    padding: 1em;
+}
+.card-container:hover{
+    border-color: black;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+.icon:hover {
+    color: rgb(233, 44, 44);
+    cursor: pointer;
+}
+p {
+    margin-top: 0;
+}

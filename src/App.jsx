@@ -15,7 +15,7 @@ function App() {
       <SideBar />
       <Routes>
         <Route path='/' element={<Dashboard />} />
-        <Route path='/excercises' element={<Exercise />} />
+        <Route path='/exercises' element={<Exercise />} />
         <Route path='/food' element={<Food />} />
         <Route path='/goals' element={<Goals />} />
       </Routes>
